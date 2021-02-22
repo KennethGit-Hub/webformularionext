@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google sheets</title>
+    <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-3"></div>
+
+          <div class="col-sm shadow mb-5 bg-white rounded">
+            <form method="POST" autocomplete="off" name="google-sheet">
+                <br>
+                <h2 style="text-align: center;">Apuestas Juve-Dinamo</h2>
+                <br>
+                <h5>Datos de SPONSOR</h5>
+                <div class="row ">
+                  <div class="col-md-8 col-sm-8 col-xs-8">
+                    <span class="help-block text-muted small-font" > ID R&W</span>
+                    <input type="text" class="form-control" name="vendedor"placeholder="Ingrese su ID" list="sponsor"required/>
+                    <datalist id="sponsor" >
+                      <option value="Abel"></option>
+                      <option value="Kenneth"></option>
+                      <option value="Joel"></option>
+                      <option value="Álvaro"></option>
+                  </div>
+                   
+                </div>
+                <br>
+
+                <h5>Datos de Apostador</h5>
+                <div class="row ">
+                  <div class="col-md-5 col-sm-5 col-xs-5">
+                      <span class="help-block text-muted small-font" > Ingrese Nombres </span>
+                      <input type="text" class="form-control"name="name" placeholder="Nombre de Apostador" required />
+                  </div>
+                  <div class="col-md-5 col-sm5 col-xs-5">
+                    <span class="help-block text-muted small-font" > Apellidos</span>
+                    <input type="text" name="apellidos" class="form-control" placeholder="Ingrese sus Apellidos" required/>
+                </div>
+
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-5 col-sm-5 col-xs-5">
+                      <span class="help-block text-muted small-font" > Número de Celular</span>
+                      <input type="number" name="celular" class="form-control" placeholder="N° Celular"required />
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                    <span class="help-block text-muted small-font" > Click para:</span>
+                    <input type="reset"  class="btn btn-danger" value="LIMPIAR FICHERO" />
+                  </div>
+               
+                </div>
+                <br>
+                <div class="form-group" >
+                  <span class="help-block text-muted small-font" >Ingrese Valor de Apuesta </span>
+                  <input type="number" placeholder="$0.00"name="venta"min="1" max="20" list="valorapuesta"class="btn btn-warning "required/>
+                  <datalist id="valorapuesta" >
+                    <option value=2.00></option>
+                    <option value=5.00></option>
+                    <option value=10.00></option>
+                    <option value=20.00></option>
+                </div>
+               <div class="row ">
+
+                <div class="col-md-5 col-sm-5 col-xs-5">
+                  <span class="help-block text-muted small-font" > Tipo de Apuesta</span>
+                  <input type="text" class="form-control" name="tipoap" placeholder="Tipo de Apuesta" list="resultados"required/>
+                  <datalist id="resultados" >
+                    <option value="Apuesta Rapidin"></option>
+                    <option value="Super Multiplicate"></option>
+                    <option value="Super Combo R&W"></option>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                  <span class="help-block text-muted small-font" >MULTIPLICADOR</span>
+                  <input type="text"  class="form-control" name="multi" list="multiplicadores"placeholder="x" required/>
+                  <datalist id="multiplicadores" >
+                    <option value=1.8></option>
+                    <option value=2.0></option>
+                    <option value=2.5></option>
+                    <option value=3.0></option>
+                    <option value=3.5></option>
+                    <option value=4.0></option>
+                    <option value=5.0></option>
+                    <option value=6.0></option>
+              </div>
+              <br>
+
+                
+              <br>
+              <div class="col-md-5 col-sm-5 col-xs-5">
+                <span class="help-block text-muted small-font" > Apuesta por:</span>
+                <input type="text" class="form-control" name="resultado" placeholder="Apuesta por" list="tipoapuesta"required/>
+                <datalist id="tipoapuesta" >
+                  <option value="Gana Juventus"></option>
+                  <option value="Gana Dinamo Kiev"></option>
+                  <option value="Empate"></option>
+                  <option value="Combo1"></option>
+                  <option value="Combo2"></option>
+                  <option value="Combo3"></option>
+                  <option value="Combo4"></option>
+              </div>
+              
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="help-block text-muted small-font" > Goles Juve</span>
+                    <input type="number" max="7" min="0"name="golesj"class="form-control" placeholder="N Goles" />
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="help-block text-muted small-font" > Goles Dinamo</span>
+                    <input type="number" max="7" min="0"name="golesd"class="form-control" placeholder="N Goles " />
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-md-12 pad-adjust">
+                  <button type="submit" value="Gracias por Apostar aqui" class="btn btn-primary">ENVIAR APUESTA</button>
+                                    
+                </div>
+              </div>
+               <br> 
+
+              </form>
+          </div>
+          <div class="col-3"></div>
+
+        </div>
+      </div>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwnRnCUWHTZE7QN0PASxdd85EAJjtWnaZkujU_LbA/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Gracias por Apostar con R.W.Perú.! Nosotros te contactaremos..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
